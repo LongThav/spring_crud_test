@@ -49,7 +49,7 @@ public class SecurityConfig {
                     .authenticationEntryPoint((request, response, authException) -> {
                         response.setStatus(HttpServletResponse.SC_FORBIDDEN); // Set status to 403
                         response.setContentType("application/json");
-                        response.getWriter().write("{\"status_code\": 401, \"status\": false, \"message\": \"User not authorized\"}");
+                        response.getWriter().write("{\"status_code\": 403, \"status\": false, \"message\": \"User not authorized\"}");
                     })
             );
 
